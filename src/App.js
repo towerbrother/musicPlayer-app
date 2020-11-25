@@ -1,9 +1,13 @@
 import React from "react";
+import Song from "./components/Song";
+import Player from "./components/Player";
+import "./styles/App.scss";
 
 function App() {
   return (
     <div className="box">
-      <h1>Dev Ed React</h1>
+      <Song />
+      <Player />
     </div>
   );
 }
