@@ -9,7 +9,7 @@ import {
 
 const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
   const [songInfo, setSongInfo] = useState({
-    currentTime: null,
+    currentTime: 0,
     duration: null,
   });
   const audioRef = useRef(null);
@@ -36,11 +36,22 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
     }
   };
 
+  const dragHandler = (e) => {
+    audioRef.current.currentTime = e.target.value;
+    setSongInfo({ ...songInfo, currentTime: e.target.value });
+  };
+
   return (
     <div className="player">
       <div className="time-control">
         <p>{formatTime(songInfo.currentTime)}</p>
-        <input type="range" />
+        <input
+          type="range"
+          min={0}
+          max={songInfo.duration}
+          value={songInfo.currentTime}
+          onChange={dragHandler}
+        />
         <p>{formatTime(songInfo.duration)}</p>
       </div>
       <div className="play-control">
