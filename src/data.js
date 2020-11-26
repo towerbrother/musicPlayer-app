@@ -61,7 +61,16 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
-    //ADD MORE HERE
+    {
+      name: "Going Back",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/10/737bb830d34592344eb4a2a1d2c006cdbfc811d9-1024x1024.jpg",
+      artist: "Swørn",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10310",
+      color: ["#29375e", "#dde2e8"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 
