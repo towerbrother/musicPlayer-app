@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Song from "./components/Song";
 import Player from "./components/Player";
 import Library from "./components/Library";
+import Nav from "./components/Nav";
 import data from "./data";
 import "./styles/app.scss";
 
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="box">
+      <Nav />
       <Song currentSong={currentSong} />
       <Player
         audioRef={audioRef}
