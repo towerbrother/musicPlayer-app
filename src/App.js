@@ -19,9 +19,14 @@ function App() {
   const audioRef = useRef(null);
 
   const timeUpdateHandler = (e) => {
-    const current = e.target.currentTime;
+    const currentTime = e.target.currentTime;
     const duration = e.target.duration;
-    setSongInfo({ ...songInfo, currentTime: current, duration: duration });
+
+    setSongInfo({
+      ...songInfo,
+      currentTime,
+      duration,
+    });
   };
 
   return (

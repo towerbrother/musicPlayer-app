@@ -10,11 +10,11 @@ nav {
     font-weight: bold;
     font-size: medium;
     cursor: pointer;
-    border: 2px solid rgb(65, 65, 65);
+    border: 2px solid rgb(54, 54, 54);
     padding: 0.5rem;
     transition: all 0.3s ease;
     &:hover {
-      background: rgb(65, 65, 65);
+      background: rgb(54, 54, 54);
       color: white;
     }
     .icon {
