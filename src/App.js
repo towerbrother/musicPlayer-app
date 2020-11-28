@@ -65,6 +65,14 @@ function App() {
         src={currentSong.audio}
         onEnded={songEndHandler}
       ></audio>
+      <div className="bottom">
+        <h5 className="credits">
+          Music by{" "}
+          <a href="https://chillhop.ffm.to/creatorcred" target="_blank">
+            Chillhop Music
+          </a>
+        </h5>
+      </div>
     </div>
   );
 }

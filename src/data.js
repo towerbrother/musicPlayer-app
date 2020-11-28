@@ -1,77 +1,67 @@
 import { v4 as uuidv4 } from "uuid";
-function chillHop() {
+function data() {
   return [
     {
       name: "Beaver Creek",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+        "https://cdn.pixabay.com/photo/2016/08/17/01/39/mystery-1599527_960_720.jpg",
       artist: "Aso, Middle School, Aviino",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
-      color: ["#205950", "#2ab3bf"],
+      color: ["#012129", "#a3a8af"],
       id: uuidv4(),
       active: true,
     },
     {
       name: "Daylight",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+        "https://cdn.pixabay.com/photo/2017/06/03/20/12/art-2369664_960_720.jpg",
       artist: "Aiguille",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
-      color: ["#EF8EA9", "#ab417f"],
+      color: ["#fb1543", "#adae87"],
       id: uuidv4(),
       active: false,
     },
     {
       name: "Keep Going",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
+        "https://cdn.pixabay.com/photo/2016/11/29/04/45/aged-1867381_960_720.jpg",
       artist: "Swørn",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
-      color: ["#CD607D", "#c94043"],
+      color: ["#4c4347", "#a1abb0"],
       id: uuidv4(),
       active: false,
     },
     {
       name: "Nightfall",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+        "https://cdn.pixabay.com/photo/2019/09/18/21/31/marine-4487710_960_720.jpg",
       artist: "Aiguille",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
-      color: ["#EF8EA9", "#ab417f"],
+      color: ["#416788", "#cbd0d4"],
       id: uuidv4(),
       active: false,
     },
     {
       name: "Reflection",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
+        "https://cdn.pixabay.com/photo/2014/03/25/22/53/smoke-298243_960_720.jpg",
       artist: "Swørn",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
-      color: ["#CD607D", "#c94043"],
+      color: ["#000000", "#fcfdfa"],
       id: uuidv4(),
       active: false,
     },
     {
       name: "Under the City Stars",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+        "https://cdn.pixabay.com/photo/2014/12/15/17/16/night-sky-569319_960_720.jpg",
       artist: "Aso, Middle School, Aviino",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
-      color: ["#205950", "#2ab3bf"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "Going Back",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/10/737bb830d34592344eb4a2a1d2c006cdbfc811d9-1024x1024.jpg",
-      artist: "Swørn",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=10310",
-      color: ["#29375e", "#dde2e8"],
+      color: ["#04184f", "#baa4b0"],
       id: uuidv4(),
       active: false,
     },
   ];
 }
 
-export default chillHop;
+export default data;

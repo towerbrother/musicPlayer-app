@@ -5,8 +5,11 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  img {
-    width: 20%;
+  .image-cropper {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
     border-radius: 50%;
   }
   h2 {
@@ -19,8 +22,13 @@
 
 @media screen and (max-width: 768px) {
   .song-container {
-    img {
-      width: 60%;
+    padding: 0rem;
+    h2 {
+      padding: 1rem;
+    }
+    .image-cropper {
+      width: 10rem;
+      height: 10rem;
     }
   }
 }
