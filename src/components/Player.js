@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import MusicContext from "./../context/musicContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -7,17 +8,19 @@ import {
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Player = ({
-  audioRef,
-  isPlaying,
-  songInfo,
-  songs,
-  currentSong,
-  setSongs,
-  setSongInfo,
-  setIsPlaying,
-  setCurrentSong,
-}) => {
+const Player = () => {
+  const {
+    audioRef,
+    isPlaying,
+    songInfo,
+    songs,
+    currentSong,
+    setSongs,
+    setSongInfo,
+    setIsPlaying,
+    setCurrentSong,
+  } = useContext(MusicContext);
+
   const activeLibraryHandler = (nextOrPrev) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextOrPrev.id) {

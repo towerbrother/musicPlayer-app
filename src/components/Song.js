@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import MusicContext from "./../context/musicContext";
 
-const Song = ({ currentSong }) => {
+const Song = () => {
+  const { currentSong } = useContext(MusicContext);
   return (
     <div className="song-container">
       <div className="image-cropper">

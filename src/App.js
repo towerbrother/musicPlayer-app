@@ -4,6 +4,7 @@ import Player from "./components/Player";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
 import data from "./data";
+import MusicContext from "./context/musicContext";
 import "./styles/app.scss";
 
 function App() {
@@ -37,27 +38,26 @@ function App() {
 
   return (
     <div className={`box ${libraryStatus ? "library-active" : ""}`}>
-      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song currentSong={currentSong} />
-      <Player
-        audioRef={audioRef}
-        isPlaying={isPlaying}
-        songInfo={songInfo}
-        songs={songs}
-        currentSong={currentSong}
-        setSongs={setSongs}
-        setSongInfo={setSongInfo}
-        setIsPlaying={setIsPlaying}
-        setCurrentSong={setCurrentSong}
-      />
-      <Library
-        songs={songs}
-        setSongs={setSongs}
-        setCurrentSong={setCurrentSong}
-        audioRef={audioRef}
-        isPlaying={isPlaying}
-        libraryStatus={libraryStatus}
-      />
+      <MusicContext.Provider
+        value={{
+          audioRef,
+          songs,
+          setSongs,
+          songInfo,
+          setSongInfo,
+          isPlaying,
+          setIsPlaying,
+          libraryStatus,
+          setLibraryStatus,
+          currentSong,
+          setCurrentSong,
+        }}
+      >
+        <Nav />
+        <Song />
+        <Player />
+        <Library />
+      </MusicContext.Provider>
       <audio
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
