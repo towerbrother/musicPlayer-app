@@ -29,6 +29,12 @@ function App() {
     });
   };
 
+  const songEndHandler = () => {
+    const index = songs.findIndex((song) => song.id === currentSong.id);
+    const songsNumber = songs.length;
+    setCurrentSong(songs[(index + 1) % songsNumber]);
+  };
+
   return (
     <div className="box">
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
@@ -57,6 +63,7 @@ function App() {
         onLoadedMetadata={timeUpdateHandler}
         ref={audioRef}
         src={currentSong.audio}
+        onEnded={songEndHandler}
       ></audio>
     </div>
   );
