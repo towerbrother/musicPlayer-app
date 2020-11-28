@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { playAudio } from "./../utils";
 import {
   faPlay,
   faPause,
@@ -28,6 +27,7 @@ const Player = ({
       }
     });
     setSongs(newSongs);
+    if (isPlaying) audioRef.current.play();
   }, [currentSong]);
 
   const formatTime = (time) => {
@@ -46,13 +46,12 @@ const Player = ({
     }
   };
 
-  const skipTrackHandler = (direction) => {
+  const skipTrackHandler = async (direction) => {
     const index = songs.findIndex((song) => song.id === currentSong.id);
     const songsNumber = songs.length;
-    direction === "skip-back"
+    await (direction === "skip-back"
       ? setCurrentSong(songs[(index - 1 + songsNumber) % songsNumber])
-      : setCurrentSong(songs[(index + 1) % songsNumber]);
-    playAudio(isPlaying, audioRef);
+      : setCurrentSong(songs[(index + 1) % songsNumber]));
   };
 
   const dragHandler = (e) => {
