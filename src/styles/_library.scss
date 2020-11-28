@@ -9,6 +9,7 @@
   transition: all 0.5s ease;
   transform: translateX(-100%);
   opacity: 0;
+  background: white;
 
   h2 {
     padding: 2rem 0rem 1rem 2rem;
@@ -64,4 +65,13 @@
 .active-library {
   transform: translateX(0%);
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+  .library-title {
+    visibility: hidden;
+  }
 }

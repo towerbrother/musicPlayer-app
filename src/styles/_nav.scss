@@ -22,3 +22,14 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  nav {
+    .app-title {
+      z-index: 10;
+    }
+    button {
+      z-index: 10;
+    }
+  }
+}
